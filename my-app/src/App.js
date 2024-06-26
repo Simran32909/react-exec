@@ -1,7 +1,7 @@
 const user={
     name:"Shih-Tzu Singh Sandral",
     imageUrl:"https://puppiezo.com/wp-content/uploads/2023/06/IMG_1820.jpeg",
-    imageSize:90,
+    imageSize:130,
 };
 
 export default function Profile(){
