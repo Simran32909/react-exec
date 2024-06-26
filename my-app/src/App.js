@@ -1,23 +1,22 @@
-const user={
-    name:"Shih-Tzu Singh Sandral",
-    imageUrl:"https://puppiezo.com/wp-content/uploads/2023/06/IMG_1820.jpeg",
-    imageSize:130,
-};
+const products = [
+    { title: 'Cabbage', isFruit: false, id: 1 },
+    { title: 'Garlic', isFruit: false, id: 2 },
+    { title: 'Apple', isFruit: true, id: 3 },
+];
 
-export default function Profile(){
+export default function ShoppingList() {
+    const listItems = products.map(product =>
+        <li
+            key={product.id}
+            style={{
+                color: product.isFruit ? 'magenta' : 'darkgreen'
+            }}
+        >
+            {product.title}
+        </li>
+    );
+
     return (
-      <>
-          <strong>{user.name}</strong>
-          <img
-              className="profile-image"
-              src={user.imageUrl}
-              alt={"Photo of "+user.name}
-              style={{
-                  width:user.imageSize+"px",
-                  height:user.imageSize+"px",
-                  borderRadius:user.imageSize/2+"px",
-              }}
-          />
-      </>
+        <ul>{listItems}</ul>
     );
 }
